@@ -9,11 +9,21 @@ use App\Models\Task;
 class Category extends Model
 {
     use HasFactory;
-    
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $text = [
-        'name'
+        'name',
     ];
 
+    /**
+     * Renvoi la liste des tâches possédant cette catégorie
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function tasks()
     {
         return $this->hasMany(Task::class);
