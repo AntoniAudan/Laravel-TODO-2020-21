@@ -10,11 +10,6 @@ class board extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     public $fillable = [
         'title',
         'description',
